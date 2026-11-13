@@ -1,6 +1,6 @@
 {
-  "name": "@tweedegolf/storage-abstraction",
-  "version": "3.0.4",
+  "name": "@sab-js/storage-abstraction",
+  "version": "3.0.5",
   "description": "Provides an abstraction layer for interacting with a storage; the storage can be local or any of the supported cloud storage services.",
   "src": "src/Storage.js",
   "main": "dist/index/Storage.js",
@@ -22,7 +22,7 @@
     "minio",
     "azure"
   ],
-  "author": "daniel@tweedegolf.nl",
+  "author": "abudaan@pm.me",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

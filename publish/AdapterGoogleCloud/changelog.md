@@ -1,3 +1,8 @@
+# 3.0.5
+
+- moved from `@tweedegolf/sab-adapter-google-cloud` to `@sab-js/adapter-google-cloud`; `@tweedegolf/sab-adapter-google-cloud` is deprecated
+- the repository moved to https://github.com/sab-js/storage-abstraction
+
 # 3.0.4
 - update to gcs 8.4.0
 

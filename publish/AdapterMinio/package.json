@@ -1,6 +1,6 @@
 {
-  "name": "@tweedegolf/sab-adapter-minio",
-  "version": "3.0.2",
+  "name": "@sab-js/adapter-minio",
+  "version": "3.0.3",
   "description": "Provides an abstraction layer for interacting with MinIO cloud storage service.",
   "main": "dist/index/AdapterMinio.js",
   "types": "dist/index/AdapterMinio.d.ts",
@@ -22,7 +22,7 @@
     "cubbit",
     "azure"
   ],
-  "author": "daniel@tweedegolf.nl",
+  "author": "abudaan@pm.me",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

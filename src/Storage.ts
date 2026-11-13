@@ -17,7 +17,12 @@ import {
   ResultObjectObject,
   ResultObjectStream,
 } from "./types/result";
-import { adapterClasses, adapterFunctions, getAvailableAdapters } from "./adapters";
+import {
+  adapterClasses,
+  adapterFunctions,
+  getAvailableAdapters,
+  getLegacyPackageName,
+} from "./adapters";
 
 const availableAdapters: string = getAvailableAdapters();
 // console.log(availableAdapters)
@@ -69,10 +74,15 @@ export class Storage implements IAdapter {
         try {
           AdapterClass = require(path.join(__dirname, adapterName))[adapterName];
         } catch (e) {
-          if (e instanceof Error) {
-            throw e.message;
-          } else {
-            throw e;
+          // fall back to the deprecated @tweedegolf adapter package
+          const legacyPath = getLegacyPackageName(adapterPath);
+          try {
+            AdapterClass = require(legacyPath)[adapterName];
+            console.warn(
+              `[storage-abstraction] ${legacyPath} is deprecated, please install ${adapterPath} instead`
+            );
+          } catch (_e) {
+            throw `could not load adapter ${adapterName}, please install ${adapterPath}`;
           }
         }
       }

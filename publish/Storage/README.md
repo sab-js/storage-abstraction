@@ -2,6 +2,9 @@
 
 [![ci](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yaml)
 
+> [!NOTE]
+> As of version 3.0.5 the packages are published under the `@sab-js` scope; the `@tweedegolf` packages are deprecated. If you are upgrading, replace `@tweedegolf/storage-abstraction` with `@sab-js/storage-abstraction` and `@tweedegolf/sab-adapter-*` with `@sab-js/adapter-*`. Adapters that are still installed under their old name keep working for now, but log a deprecation warning.
+
 Provides an abstraction layer for interacting with a storage; the storage can be on a local file system or in the cloud. Supported cloud storage providers are:
 
 - Amazon S3
@@ -13,6 +16,8 @@ Provides an abstraction layer for interacting with a storage; the storage can be
 - Cubbit (S3)
 
 The storage abstraction API only supports basic storage operations (see [below](#adapter-api)) so the API can be cloud agnostic. This means that you can develop your application using local disk storage and then use for instance Google Cloud or Amazon S3 in your production environment without the need to change any code.
+
+<img src="./sab-js-icon.svg" alt="Storage Abstraction logo" width="100"/>
 
 ## Table of contents
 
@@ -49,17 +54,17 @@ The adapters itself are wrappers around the cloud storage provider specific clie
 
 List of available adapters:
 
-- [Local file system](https://www.npmjs.com/package/@tweedegolf/sab-adapter-local) `npm i @tweedegolf/sab-adapter-local`
-- [Amazon S3 (Amazon S3 and fully compatible)](https://www.npmjs.com/package/@tweedegolf/sab-adapter-amazon-s3) `npm i @tweedegolf/sab-adapter-amazon-s3`
-- [Google cloud](https://www.npmjs.com/package/@tweedegolf/sab-adapter-google-cloud) `npm i @tweedegolf/sab-adapter-google-cloud`
-- [Azure Blob](https://www.npmjs.com/package/@tweedegolf/sab-adapter-azure-blob) `npm i @tweedegolf/sab-adapter-azure-blob`
-- [S3 (Amazon and Backblaze, Cloudflare, Cubbit and MinIO)](https://www.npmjs.com/package/@tweedegolf/sab-adapter-s3) `npm i @tweedegolf/sab-adapter-s3`
-- [Backblaze B2 using native API](https://www.npmjs.com/package/@tweedegolf/sab-adapter-backblaze-b2) `npm i @tweedegolf/sab-adapter-backblaze-b2`
-- [Backblaze B2 using S3 API](https://www.npmjs.com/package/@tweedegolf/sab-adapter-backblaze-s3) `npm i @tweedegolf/sab-adapter-backblaze-s3`
-- [MinIO using native API](https://www.npmjs.com/package/@tweedegolf/sab-adapter-minio) `npm i @tweedegolf/sab-adapter-minio`
-- [MinIO using S3 API](https://www.npmjs.com/package/@tweedegolf/sab-adapter-minio-s3) `npm i @tweedegolf/sab-adapter-minio-s3`
-- [Cubbit](https://www.npmjs.com/package/@tweedegolf/sab-adapter-cubbit-s3) `npm i @tweedegolf/sab-adapter-cubbit-s3`
-- [Cloudflare R2](https://www.npmjs.com/package/@tweedegolf/sab-adapter-cloudflare-s3) `npm i @tweedegolf/sab-adapter-cloudflare-s3`
+- [Local file system](https://www.npmjs.com/package/@sab-js/adapter-local) `npm i @sab-js/adapter-local`
+- [Amazon S3 (Amazon S3 and fully compatible)](https://www.npmjs.com/package/@sab-js/adapter-amazon-s3) `npm i @sab-js/adapter-amazon-s3`
+- [Google cloud](https://www.npmjs.com/package/@sab-js/adapter-google-cloud) `npm i @sab-js/adapter-google-cloud`
+- [Azure Blob](https://www.npmjs.com/package/@sab-js/adapter-azure-blob) `npm i @sab-js/adapter-azure-blob`
+- [S3 (Amazon and Backblaze, Cloudflare, Cubbit and MinIO)](https://www.npmjs.com/package/@sab-js/adapter-s3) `npm i @sab-js/adapter-s3`
+- [Backblaze B2 using native API](https://www.npmjs.com/package/@sab-js/adapter-backblaze-b2) `npm i @sab-js/adapter-backblaze-b2`
+- [Backblaze B2 using S3 API](https://www.npmjs.com/package/@sab-js/adapter-backblaze-s3) `npm i @sab-js/adapter-backblaze-s3`
+- [MinIO using native API](https://www.npmjs.com/package/@sab-js/adapter-minio) `npm i @sab-js/adapter-minio`
+- [MinIO using S3 API](https://www.npmjs.com/package/@sab-js/adapter-minio-s3) `npm i @sab-js/adapter-minio-s3`
+- [Cubbit](https://www.npmjs.com/package/@sab-js/adapter-cubbit-s3) `npm i @sab-js/adapter-cubbit-s3`
+- [Cloudflare R2](https://www.npmjs.com/package/@sab-js/adapter-cloudflare-s3) `npm i @sab-js/adapter-cloudflare-s3`
 
 It is important to know that `S3` and `Amazon S3` are different adapters; `Amazon S3` only supports Amazon S3 and strict compatible providers whereas `S3` supports Amazon S3 and the partial compatible providers Cubbit, Cloudflare, MinIO S3 and Backblaze S3. The latter adapter exists for historical reasons; originally we tried to create a single adapter for all S3 compatible providers but unfortunately the implementation of S3 differs quite across 'compatible' providers which led to a lot of if-else forking in the code making it hard to read and maintain. 
 
@@ -359,17 +364,17 @@ A description of the available adapters; what the configuration objects and URLs
 
 | provider          | npm command                                  | readme                                                                                                    |
 | ------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Local storage | `npm i @tweedegolf/sab-adapter-local`        | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-local?activeTab=readme)        |
-| Amazon S3     | `npm i @tweedegolf/sab-adapter-amazon-s3`    | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-amazon-s3?activeTab=readme)    |
-| Azure Blob    | `npm i @tweedegolf/sab-adapter-azure-blob`   | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-azure-blob?activeTab=readme)   |
-| Backblaze B2  | `npm i @tweedegolf/sab-adapter-backblaze-b2` | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-backblaze-b2?activeTab=readme) |
-| Google Cloud  | `npm i @tweedegolf/sab-adapter-google-cloud` | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-google-cloud?activeTab=readme) |
-| MinIO         | `npm i @tweedegolf/sab-adapter-minio`        | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-minio?activeTab=readme)        |
-| S3            | `npm i @tweedegolf/sab-adapter-s3`           | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-s3?activeTab=readme)    |
-| Backblaze B2 S3 | `npm i @tweedegolf/sab-adapter-backblaze-s3`  | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-backblaze-s3?activeTab=readme)    |
-| Cubbit        | `npm i @tweedegolf/sab-adapter-cubbit-s3`    | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-cubbit-s3?activeTab=readme)    |
-| Cloudflare R2 | `npm i @tweedegolf/sab-adapter-cloudflare-s3` | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-cloudflare-s3?activeTab=readme)    |
-| MinIO S3      | `npm i @tweedegolf/sab-adapter-minio-s3`    | [**npm.com&#8599;**](https://www.npmjs.com/package/@tweedegolf/sab-adapter-minio-s3?activeTab=readme)    |
+| Local storage | `npm i @sab-js/adapter-local`        | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-local?activeTab=readme)        |
+| Amazon S3     | `npm i @sab-js/adapter-amazon-s3`    | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-amazon-s3?activeTab=readme)    |
+| Azure Blob    | `npm i @sab-js/adapter-azure-blob`   | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-azure-blob?activeTab=readme)   |
+| Backblaze B2  | `npm i @sab-js/adapter-backblaze-b2` | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-backblaze-b2?activeTab=readme) |
+| Google Cloud  | `npm i @sab-js/adapter-google-cloud` | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-google-cloud?activeTab=readme) |
+| MinIO         | `npm i @sab-js/adapter-minio`        | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-minio?activeTab=readme)        |
+| S3            | `npm i @sab-js/adapter-s3`           | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-s3?activeTab=readme)    |
+| Backblaze B2 S3 | `npm i @sab-js/adapter-backblaze-s3`  | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-backblaze-s3?activeTab=readme)    |
+| Cubbit        | `npm i @sab-js/adapter-cubbit-s3`    | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-cubbit-s3?activeTab=readme)    |
+| Cloudflare R2 | `npm i @sab-js/adapter-cloudflare-s3` | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-cloudflare-s3?activeTab=readme)    |
+| MinIO S3      | `npm i @sab-js/adapter-minio-s3`    | [**npm.com&#8599;**](https://www.npmjs.com/package/@sab-js/adapter-minio-s3?activeTab=readme)    |
 
 You can also add more adapters yourself very easily, see [below](#adding-more-adapters).
 
@@ -1323,7 +1328,7 @@ The config parameter is the same type of object or URL that you use to instantia
 If your application needs to copy over files from one storage service to another, say for instance from Google Cloud to Amazon S3, then it is more convenient to create 2 separate Storage instances:
 
 ```typescript
-import { Storage } from "@tweedegolf/storage-abstraction"
+import { Storage } from "@sab-js/storage-abstraction"
 
 const s1 = new Storage({type: "s3"});
 const s2 = new Storage({type: "gcs"});
@@ -1468,7 +1473,7 @@ The `switchAdapter` method of Storage parses the type from the configuration and
 
 ```typescript
 export const adapterClasses = {
-  s3: ["AdapterAmazonS3", "@tweedegolf/sab-adapter-amazon-s3"],
+  s3: ["AdapterAmazonS3", "@sab-js/adapter-amazon-s3"],
   your_type: ["AdapterYourService", "@you/sab-adapter-your-service"],
   ...
 };

@@ -1,3 +1,9 @@
+# 3.0.5
+
+- moved from `@tweedegolf/storage-abstraction` to `@sab-js/storage-abstraction`; `@tweedegolf/storage-abstraction` is deprecated
+- the repository moved to https://github.com/sab-js/storage-abstraction
+- adapters are loaded from the `@sab-js` scope; if an adapter is not installed, the deprecated `@tweedegolf` adapter is used as a fallback (with a warning)
+
 # 3.0.4
 
 - add checkIfBucketExists option in getFileAsStream

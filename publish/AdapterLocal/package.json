@@ -1,6 +1,6 @@
 {
-  "name": "@tweedegolf/sab-adapter-local",
-  "version": "3.0.2",
+  "name": "@sab-js/adapter-local",
+  "version": "3.0.3",
   "description": "Provides an abstraction layer for interacting with local storage on your local machine or on your server.",
   "main": "dist/index/AdapterLocal.js",
   "types": "dist/index/AdapterLocal.d.ts",
@@ -24,7 +24,7 @@
     "minio",
     "azure"
   ],
-  "author": "daniel@tweedegolf.nl",
+  "author": "abudaan@pm.me",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

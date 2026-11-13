@@ -1,8 +1,11 @@
 # Google Cloud Storage Adapter
 
+> [!NOTE]
+> This package used to be published as `@tweedegolf/sab-adapter-google-cloud`, which is deprecated. If you are upgrading, replace `@tweedegolf/sab-adapter-google-cloud` with `@sab-js/adapter-google-cloud` and use `@sab-js/storage-abstraction` instead of `@tweedegolf/storage-abstraction`.
+
 An adapter that provides an abstraction layer over the API of the Google cloud storage service.
 
-This adapter is one of the adapters that is meant to be used as a plugin of the [Storage Abstraction package](https://www.npmjs.com/package/@tweedegolf/storage-abstraction). However it can be used standalone as well, see [below](#standalone).
+This adapter is one of the adapters that is meant to be used as a plugin of the [Storage Abstraction package](https://www.npmjs.com/package/@sab-js/storage-abstraction). However it can be used standalone as well, see [below](#standalone).
 
 The [API](https://github.com/sab-js/storage-abstraction/tree/main?tab=readme-ov-file#adapter-api) of the adapter abstracts away the differences between the API's of cloud storage services. The API only supports the basic, most commonly used cloud service operations such as creating a bucket, storing files and so on.
 
@@ -11,7 +14,7 @@ It is also possible to access all the specific functionality of the cloud servic
 If you are new to the Storage Abstraction library you may want to read [this](https://github.com/sab-js/storage-abstraction/blob/main/README.md#how-it-works) first.
 
 ```typescript
-import { Storage, Provider } from "@tweedegolf/storage-abstraction";
+import { Storage, Provider } from "@sab-js/storage-abstraction";
 
 const configuration = {
   type: Provider.GCS,
@@ -108,7 +111,7 @@ GOOGLE_APPLICATION_CREDENTIALS="path/to/keyFile.json"
 You can also use the adapter standalone, without the need to create a Storage instance:
 
 ```typescript
-import { AdapterGoogleStorage } from "@tweedegolf/sab-adapter-google-storage";
+import { AdapterGoogleStorage } from "@sab-js/adapter-google-storage";
 
 const a = new AdapterGoogleStorage();
 const r = await a.listBuckets();

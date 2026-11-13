@@ -1,3 +1,8 @@
+# 3.0.4
+
+- moved from `@tweedegolf/sab-adapter-backblaze-b2` to `@sab-js/adapter-backblaze-b2`; `@tweedegolf/sab-adapter-backblaze-b2` is deprecated
+- the repository moved to https://github.com/sab-js/storage-abstraction
+
 # 3.0.3
 - update dependencies
 
