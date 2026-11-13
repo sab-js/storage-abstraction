@@ -1,6 +1,6 @@
 {
   "name": "@sab-js/adapter-backblaze-s3",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Provides an abstraction layer for interacting with Amazon S3 and S3 compatible cloud services.",
   "main": "dist/index/AdapterBackblazeS3.js",
   "types": "dist/index/AdapterBackblazeS3.d.ts",

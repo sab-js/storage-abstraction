@@ -1,3 +1,7 @@
+# 3.0.4
+
+- first release published from GitHub Actions using npm trusted publishing, with provenance
+
 # 3.0.3
 
 - moved from `@tweedegolf/sab-adapter-minio` to `@sab-js/adapter-minio`; `@tweedegolf/sab-adapter-minio` is deprecated

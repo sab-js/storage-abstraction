@@ -1,3 +1,7 @@
+# 3.0.6
+
+- first release published from GitHub Actions using npm trusted publishing, with provenance
+
 # 3.0.5
 
 - moved from `@tweedegolf/sab-adapter-backblaze-s3` to `@sab-js/adapter-backblaze-s3`; `@tweedegolf/sab-adapter-backblaze-s3` is deprecated

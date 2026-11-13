@@ -25,12 +25,16 @@ type PackageJson = {
 // can't be found on npm (not published yet, or no network)
 function getPublished(name: string): null | { version: string; dependencies: Dependencies } {
   try {
-    const data = JSON.parse(
+    let data = JSON.parse(
       execSync(`npm view ${name} version dependencies --json`, {
         encoding: "utf8",
         stdio: ["ignore", "pipe", "ignore"],
       })
     );
+    // some npm versions wrap the result in an array
+    if (Array.isArray(data)) {
+      data = data[data.length - 1];
+    }
     // npm view returns only the version string if the package has no dependencies
     if (typeof data === "string") {
       return { version: data, dependencies: {} };
