@@ -4,8 +4,8 @@
   "description": "Provides an abstraction layer for interacting with Amazon S3 and S3 compatible cloud services.",
   "main": "dist/index/AdapterBackblazeS3.js",
   "types": "dist/index/AdapterBackblazeS3.d.ts",
-  "homepage": "https://github.com/tweedegolf/storage-abstraction/",
-  "repository": "https://github.com/tweedegolf/storage-abstraction/",
+  "homepage": "https://github.com/sab-js/storage-abstraction/",
+  "repository": "https://github.com/sab-js/storage-abstraction/",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1152.0",
     "@aws-sdk/s3-presigned-post": "^3.1152.0",

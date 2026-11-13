@@ -1,6 +1,6 @@
 # <a name='storage-abstraction'></a>Storage Abstraction
 
-[![ci](https://github.com/tweedegolf/storage-abstraction/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/tweedegolf/storage-abstraction/actions/workflows/ci.yaml)
+[![ci](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yaml)
 
 Provides an abstraction layer for interacting with a storage; the storage can be on a local file system or in the cloud. Supported cloud storage providers are:
 
@@ -1426,7 +1426,7 @@ For more information about configuration URLs please read [this section](#config
 
 ### Adapter class
 
-It is recommended that your adapter class extends `AbstractStorage`. If you look at the [code](https://github.com/tweedegolf/storage-abstraction/blob/master/src/AbstractAdapter.ts) you can see that it implements the complete introspective API. `getServiceClient` returns an `any` value and `getConfig` returns a generic `AdapterConfig` object; you may want to override these methods to make them return your adapter specific types.
+It is recommended that your adapter class extends `AbstractStorage`. If you look at the [code](https://github.com/sab-js/storage-abstraction/blob/main/src/AbstractAdapter.ts) you can see that it implements the complete introspective API. `getServiceClient` returns an `any` value and `getConfig` returns a generic `AdapterConfig` object; you may want to override these methods to make them return your adapter specific types.
 
 Note that all API methods that have and optional `bucketName` arg are implemented as overloaded methods:
 
@@ -1454,13 +1454,13 @@ The abstract stub methods need to be implemented and the other `IAdapter` method
 
 You don't necessarily have to extend `AbstractAdapter` but if you choose not to your class should implement the `IAdapter` interface. You'll find some configuration parse functions in the separate file `./src/util.ts` so you can easily import these in your own class if these are useful for you.
 
-You can use this [template](https://github.com/tweedegolf/storage-abstraction/blob/master/src/template_class.ts) as a starting point for your adapter. The template contains a lot of additional documentation per method.
+You can use this [template](https://github.com/sab-js/storage-abstraction/blob/main/src/template_class.ts) as a starting point for your adapter. The template contains a lot of additional documentation per method.
 
 ### Adapter function
 
 The only requirement for this type of adapter is that your module exports a function `createAdapter` that takes a configuration object or URL as parameter and returns an object that has the shape or type of the interface `IAdapter`.
 
-You may want to check if you can use some of the utility functions defined in `./src/util.js`. Also there is a [template](https://github.com/tweedegolf/storage-abstraction/blob/master/src/template_functional.ts) file that you can use as a starting point for your module.
+You may want to check if you can use some of the utility functions defined in `./src/util.js`. Also there is a [template](https://github.com/sab-js/storage-abstraction/blob/main/src/template_functional.ts) file that you can use as a starting point for your module.
 
 ### Register your adapter
 
@@ -1545,7 +1545,7 @@ A simple application that shows how you can use the storage abstraction package 
 
 ## Questions and requests
 
-Please let us know if you have any questions and/or request by creating an [issue](https://github.com/tweedegolf/storage-abstraction/issues).
+Please let us know if you have any questions and/or request by creating an [issue](https://github.com/sab-js/storage-abstraction/issues).
 
 ```
 

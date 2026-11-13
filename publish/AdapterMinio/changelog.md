@@ -14,7 +14,7 @@
 - removed option `{allVersions: boolean}` for `removeFile`
 - `removeFile` does not fail if the file doesn't exist
 - `deleteBucket` does not fail if the bucket doesn't exist
-- see also the [migration guide](https://github.com/tweedegolf/storage-abstraction/blob/master/migration_to_api3.0.md)
+- see also the [migration guide](https://github.com/sab-js/storage-abstraction/blob/main/migration_to_api3.0.md)
 
 # 1.0.12
 

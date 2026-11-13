@@ -5,8 +5,8 @@
   "src": "src/Storage.js",
   "main": "dist/index/Storage.js",
   "types": "dist/index/Storage.d.ts",
-  "homepage": "https://github.com/tweedegolf/storage-abstraction/",
-  "repository": "https://github.com/tweedegolf/storage-abstraction/",
+  "homepage": "https://github.com/sab-js/storage-abstraction/",
+  "repository": "https://github.com/sab-js/storage-abstraction/",
   "scripts": {},
   "keywords": [
     "storage abstraction",

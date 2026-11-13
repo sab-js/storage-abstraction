@@ -4,8 +4,8 @@
   "description": "Provides an abstraction layer for interacting with MinIO cloud storage service.",
   "main": "dist/index/AdapterMinio.js",
   "types": "dist/index/AdapterMinio.d.ts",
-  "homepage": "https://github.com/tweedegolf/storage-abstraction/",
-  "repository": "https://github.com/tweedegolf/storage-abstraction/",
+  "homepage": "https://github.com/sab-js/storage-abstraction/",
+  "repository": "https://github.com/sab-js/storage-abstraction/",
   "dependencies": {
     "minio": "^8.0.7"
   },

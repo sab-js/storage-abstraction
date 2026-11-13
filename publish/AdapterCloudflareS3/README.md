@@ -4,11 +4,11 @@ This adapter provides an abstraction layer over the S3 API of Cloudflare R2 clou
 
 The adapter is one of the adapters that is meant to be used as a plugin of the [Storage Abstraction package](https://www.npmjs.com/package/@tweedegolf/storage-abstraction). However it can be used standalone as well, see [below](#standalone).
 
-The [API](https://github.com/tweedegolf/storage-abstraction/tree/master?tab=readme-ov-file#adapter-api) of the adapter abstracts away the differences between the API's of cloud storage services. The API only supports the basic, most commonly used cloud service operations such as creating a bucket, storing files and so on.
+The [API](https://github.com/sab-js/storage-abstraction/tree/main?tab=readme-ov-file#adapter-api) of the adapter abstracts away the differences between the API's of cloud storage services. The API only supports the basic, most commonly used cloud service operations such as creating a bucket, storing files and so on.
 
-It is also possible to access all the specific functionality of the cloud service API through the service client of the adapter, see [here](https://github.com/tweedegolf/storage-abstraction/tree/master?tab=readme-ov-file#getserviceclient).
+It is also possible to access all the specific functionality of the cloud service API through the service client of the adapter, see [here](https://github.com/sab-js/storage-abstraction/tree/main?tab=readme-ov-file#getserviceclient).
 
-If you are new to the Storage Abstraction library you may want to read [this](https://github.com/tweedegolf/storage-abstraction/blob/master/README.md#how-it-works) first.
+If you are new to the Storage Abstraction library you may want to read [this](https://github.com/sab-js/storage-abstraction/blob/main/README.md#how-it-works) first.
 
 Cloudflare also has a native API. You can use [this adapter](https://www.npmjs.com/package/@tweedegolf/sab-adapter-backblaze-b2) if you want to use the native API.
 
@@ -27,9 +27,9 @@ const result = await storage.listBuckets();
 console.log(result);
 ```
 
-The Storage class is cloud service agnostic and doesn't know anything about the adapter it uses and adapters are completely interchangeable. It only expects the adapter to have implemented all methods of the `IAdapter` interface, see the [API](https://github.com/tweedegolf/storage-abstraction/blob/master/README.md#adapter-api).
+The Storage class is cloud service agnostic and doesn't know anything about the adapter it uses and adapters are completely interchangeable. It only expects the adapter to have implemented all methods of the `IAdapter` interface, see the [API](https://github.com/sab-js/storage-abstraction/blob/main/README.md#adapter-api).
 
-When you create a Storage instance it checks the mandatory `type` key in the configuration object and then loads the appropriate adapter module automatically from your node_modules folder using `require()`. For more information please read [this](https://github.com/tweedegolf/storage-abstraction/blob/master/README.md#register-your-adapter).
+When you create a Storage instance it checks the mandatory `type` key in the configuration object and then loads the appropriate adapter module automatically from your node_modules folder using `require()`. For more information please read [this](https://github.com/sab-js/storage-abstraction/blob/main/README.md#register-your-adapter).
 
 ## Configuration
 
@@ -108,7 +108,7 @@ It is mandatory to set a value for `region`, use one of these values:
 
 You can also set the region using the `AWS_REGION` environment variable.
 
-For more information about configuration urls please read [this](https://github.com/tweedegolf/storage-abstraction/blob/master/README.md#configuration-url).
+For more information about configuration urls please read [this](https://github.com/sab-js/storage-abstraction/blob/main/README.md#configuration-url).
 
 ## Standalone
 
@@ -124,7 +124,7 @@ console.log(r);
 
 ## API
 
-For a complete description of the Adapter API see [this part](https://github.com/tweedegolf/storage-abstraction/blob/master/README.md#adapter-api) documentation of the Storage Abstraction package readme.
+For a complete description of the Adapter API see [this part](https://github.com/sab-js/storage-abstraction/blob/main/README.md#adapter-api) documentation of the Storage Abstraction package readme.
 
 ## Exceptions
 

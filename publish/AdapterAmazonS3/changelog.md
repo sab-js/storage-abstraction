@@ -24,7 +24,7 @@
 - removed option `{allVersions: boolean}` for `removeFile`
 - `removeFile` does not fail if the file doesn't exist
 - `deleteBucket` does not fail if the bucket doesn't exist
-- see also the [migration guide](https://github.com/tweedegolf/storage-abstraction/blob/master/migration_to_api3.0.md)
+- see also the [migration guide](https://github.com/sab-js/storage-abstraction/blob/main/migration_to_api3.0.md)
 - update @aws-sdk to 3.913.0
 
 # 1.0.20
@@ -38,7 +38,7 @@
 # 1.0.18
 
 - update @aws-sdk to 3.888.0
-- add check: if you use the Amazon adapter to connect to Cloudflare R2 `getFileAsUrl`, `addFileFromPath`, `addFileFromBuffer` and `addFileFromStream` return a signed url regardless whether `useSignedURL` is false or true. See [issue #72](https://github.com/tweedegolf/storage-abstraction/issues/72).
+- add check: if you use the Amazon adapter to connect to Cloudflare R2 `getFileAsUrl`, `addFileFromPath`, `addFileFromBuffer` and `addFileFromStream` return a signed url regardless whether `useSignedURL` is false or true. See [issue #72](https://github.com/sab-js/storage-abstraction/issues/72).
 - implemented new API methods `bucketIsPublic`, `getPublicURL` and `getSignedURL`
 
 # 1.0.17

@@ -4,8 +4,8 @@
   "description": "Provides an abstraction layer for interacting with local storage on your local machine or on your server.",
   "main": "dist/index/AdapterLocal.js",
   "types": "dist/index/AdapterLocal.d.ts",
-  "homepage": "https://github.com/tweedegolf/storage-abstraction/",
-  "repository": "https://github.com/tweedegolf/storage-abstraction/",
+  "homepage": "https://github.com/sab-js/storage-abstraction/",
+  "repository": "https://github.com/sab-js/storage-abstraction/",
   "dependencies": {
     "glob": "^13.0.6",
     "rimraf": "^6.1.3"

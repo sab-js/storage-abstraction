@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a5f"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="layer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="cloud" gradientUnits="userSpaceOnUse" x1="0" y1="290" x2="0" y2="416">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bae6fd"/>
+    </linearGradient>
+    <clipPath id="disk"><path d="M96 300 V396 A64 20 0 0 0 224 396 V300 Z"/></clipPath>
+  </defs>
+
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- connectors: one interface branching to many backends -->
+  <path d="M256 190 V240 M160 240 H352 M160 240 V300 M352 240 V300"
+        fill="none" stroke="#64748b" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- abstraction layer -->
+  <rect x="88" y="100" width="336" height="92" rx="26" fill="url(#layer)"/>
+  <circle cx="200" cy="146" r="12" fill="#0f172a" opacity="0.55"/>
+  <circle cx="256" cy="146" r="12" fill="#0f172a" opacity="0.55"/>
+  <circle cx="312" cy="146" r="12" fill="#0f172a" opacity="0.55"/>
+
+  <!-- local storage: disk cylinder -->
+  <path d="M96 300 V396 A64 20 0 0 0 224 396 V300 Z" fill="#fbbf24"/>
+  <path d="M96 348 A64 20 0 0 0 224 348" fill="none" stroke="#d97706" stroke-width="8" clip-path="url(#disk)"/>
+  <ellipse cx="160" cy="300" rx="64" ry="20" fill="#fde68a"/>
+
+  <!-- cloud storage -->
+  <g fill="url(#cloud)">
+    <circle cx="330" cy="348" r="38"/>
+    <circle cx="374" cy="336" r="46"/>
+    <rect x="290" y="352" width="130" height="64" rx="32"/>
+  </g>
+</svg>
