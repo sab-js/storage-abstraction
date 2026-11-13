@@ -1,6 +1,6 @@
 # <a name='storage-abstraction'></a>Storage Abstraction
 
-[![ci](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yaml)
+[![ci](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sab-js/storage-abstraction/actions/workflows/ci.yml)
 
 > [!NOTE]
 > As of version 3.0.5 the packages are published under the `@sab-js` scope; the `@tweedegolf` packages are deprecated. If you are upgrading, replace `@tweedegolf/storage-abstraction` with `@sab-js/storage-abstraction` and `@tweedegolf/sab-adapter-*` with `@sab-js/adapter-*`. Adapters that are still installed under their old name keep working for now, but log a deprecation warning.
