@@ -1546,7 +1546,7 @@ You can make the created bucket public using the web console of Cloudflare and B
 > [!NOTE]
 > not yet updated to API 2.0!
 
-A simple application that shows how you can use the storage abstraction package can be found in [this repository](https://github.com/tweedegolf/storage-abstraction-example). It uses and Ts.ED and TypeORM and it consists of both a backend and a frontend.
+A simple application that shows how you can use the storage abstraction package can be found in [this repository](https://github.com/sab-js/storage-abstraction-example). It uses and Ts.ED and TypeORM and it consists of both a backend and a frontend.
 
 ## Questions and requests
 
