@@ -1,3 +1,8 @@
+# 3.0.3
+
+- moved from `@tweedegolf/sab-adapter-local` to `@sab-js/adapter-local`; `@tweedegolf/sab-adapter-local` is deprecated
+- the repository moved to https://github.com/sab-js/storage-abstraction
+
 # 3.0.2
 
 - update dependencies

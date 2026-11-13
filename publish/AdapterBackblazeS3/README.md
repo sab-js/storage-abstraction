@@ -1,8 +1,11 @@
 # Backblaze S3 Adapter
 
+> [!NOTE]
+> This package used to be published as `@tweedegolf/sab-adapter-backblaze-s3`, which is deprecated. If you are upgrading, replace `@tweedegolf/sab-adapter-backblaze-s3` with `@sab-js/adapter-backblaze-s3` and use `@sab-js/storage-abstraction` instead of `@tweedegolf/storage-abstraction`.
+
 An adapter that provides an abstraction layer over the Backblaze B2 S3 API. It extends `AdapterAmazonS3` and overrides some methods because the implementation of Backblaze is not fully compatible.
 
-This adapter is one of the adapters that is meant to be used as a plugin of the [Storage Abstraction package](https://www.npmjs.com/package/@tweedegolf/storage-abstraction). However it can be used standalone as well, see [below](#standalone).
+This adapter is one of the adapters that is meant to be used as a plugin of the [Storage Abstraction package](https://www.npmjs.com/package/@sab-js/storage-abstraction). However it can be used standalone as well, see [below](#standalone).
 
 The [API](https://github.com/sab-js/storage-abstraction/tree/main?tab=readme-ov-file#adapter-api) of the adapter abstracts away the differences between the API's of cloud storage services. The API only supports the basic, most commonly used cloud service operations such as creating a bucket, storing files and so on.
 
@@ -10,10 +13,10 @@ It is also possible to access all the specific functionality of the cloud servic
 
 If you are new to the Storage Abstraction library you may want to read [this](https://github.com/sab-js/storage-abstraction/blob/main/README.md#how-it-works) first.
 
-Backblaze B2 also has a native API. You can use [this adapter](https://www.npmjs.com/package/@tweedegolf/sab-adapter-backblaze-b2) if you want to use the native API.
+Backblaze B2 also has a native API. You can use [this adapter](https://www.npmjs.com/package/@sab-js/adapter-backblaze-b2) if you want to use the native API.
 
 ```typescript
-import { Storage, StorageType } from "@tweedegolf/storage-abstraction";
+import { Storage, StorageType } from "@sab-js/storage-abstraction";
 
 const configuration = {
   type: StorageType.BACKBLAZE_S3,
@@ -116,7 +119,7 @@ For more information about configuration urls please read [this](https://github.
 You can also use the adapter standalone, without the need to create a Storage instance:
 
 ```typescript
-import { AdapterAmazonS3 } from "@tweedegolf/sab-adapter-amazon-s3";
+import { AdapterAmazonS3 } from "@sab-js/adapter-amazon-s3";
 
 const a = new AdapterAmazonS3();
 const r = await a.listBuckets();

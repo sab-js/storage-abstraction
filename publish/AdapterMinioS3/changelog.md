@@ -1,3 +1,8 @@
+# 3.0.8
+
+- moved from `@tweedegolf/sab-adapter-minio-s3` to `@sab-js/adapter-minio-s3`; `@tweedegolf/sab-adapter-minio-s3` is deprecated
+- the repository moved to https://github.com/sab-js/storage-abstraction
+
 # 3.0.7
 - update dependencies
 

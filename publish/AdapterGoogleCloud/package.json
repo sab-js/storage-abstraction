@@ -1,6 +1,6 @@
 {
-  "name": "@tweedegolf/sab-adapter-google-cloud",
-  "version": "3.0.4",
+  "name": "@sab-js/adapter-google-cloud",
+  "version": "3.0.5",
   "description": "Provides an abstraction layer for interacting with Google Cloud storage service.",
   "main": "dist/index/AdapterGoogleCloud.js",
   "types": "dist/index/AdapterGoogleCloud.d.ts",
@@ -25,7 +25,7 @@
     "minio",
     "azure"
   ],
-  "author": "daniel@tweedegolf.nl",
+  "author": "abudaan@pm.me",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

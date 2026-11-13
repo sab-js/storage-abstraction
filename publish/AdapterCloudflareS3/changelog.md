@@ -1,3 +1,8 @@
+# 3.0.7
+
+- moved from `@tweedegolf/sab-adapter-cloudflare-s3` to `@sab-js/adapter-cloudflare-s3`; `@tweedegolf/sab-adapter-cloudflare-s3` is deprecated
+- the repository moved to https://github.com/sab-js/storage-abstraction
+
 # 3.0.6
 - update dependencies
 

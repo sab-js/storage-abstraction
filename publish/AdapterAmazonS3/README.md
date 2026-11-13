@@ -1,8 +1,11 @@
 # Amazon S3 Storage Adapter
 
+> [!NOTE]
+> This package used to be published as `@tweedegolf/sab-adapter-amazon-s3`, which is deprecated. If you are upgrading, replace `@tweedegolf/sab-adapter-amazon-s3` with `@sab-js/adapter-amazon-s3` and use `@sab-js/storage-abstraction` instead of `@tweedegolf/storage-abstraction`.
+
 An adapter that provides an abstraction layer over the API of the Amazon S3 cloud storage service and other *fully* S3 compatible services.
 
-This adapter is one of the adapters that is meant to be used as a plugin of the [Storage Abstraction package](https://www.npmjs.com/package/@tweedegolf/storage-abstraction). However it can be used standalone as well, see [below](#standalone).
+This adapter is one of the adapters that is meant to be used as a plugin of the [Storage Abstraction package](https://www.npmjs.com/package/@sab-js/storage-abstraction). However it can be used standalone as well, see [below](#standalone).
 
 The [API](https://github.com/sab-js/storage-abstraction/tree/main?tab=readme-ov-file#adapter-api) of the adapter abstracts away the differences between the API's of cloud storage providers. The API only supports the basic, most commonly used cloud service operations such as creating a bucket, storing files and so on.
 
@@ -11,7 +14,7 @@ It is also possible to access all the specific functionality of the cloud servic
 If you are new to the Storage Abstraction library you may want to read [this](https://github.com/sab-js/storage-abstraction/blob/main/README.md#how-it-works) first.
 
 ```typescript
-import { Storage, Provider } from "@tweedegolf/storage-abstraction";
+import { Storage, Provider } from "@sab-js/storage-abstraction";
 
 const configuration = {
   type: Provider.AWS,
@@ -124,7 +127,7 @@ AWS_REGION="eu-west-1"
 You can also use the adapter standalone, without the need to create a Storage instance:
 
 ```typescript
-import { AdapterAmazonS3 } from "@tweedegolf/sab-adapter-amazon-s3";
+import { AdapterAmazonS3 } from "@sab-js/adapter-amazon-s3";
 
 const a = new AdapterAmazonS3();
 const r = await a.listBuckets();

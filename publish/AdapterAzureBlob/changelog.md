@@ -1,3 +1,8 @@
+# 3.0.5
+
+- moved from `@tweedegolf/sab-adapter-azure-blob` to `@sab-js/adapter-azure-blob`; `@tweedegolf/sab-adapter-azure-blob` is deprecated
+- the repository moved to https://github.com/sab-js/storage-abstraction
+
 # 3.0.4
 - update dependencies
 
