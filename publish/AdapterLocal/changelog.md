@@ -1,3 +1,7 @@
+# 3.0.5
+
+- update `glob` to 14 (and `rimraf` to 6.1.4, which also uses `glob` 14) for CVE-2026-118773 in glob and CVE-2026-118764 in minimatch
+
 # 3.0.4
 
 - first release published from GitHub Actions using npm trusted publishing, with provenance

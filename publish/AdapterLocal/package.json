@@ -1,14 +1,14 @@
 {
   "name": "@sab-js/adapter-local",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Provides an abstraction layer for interacting with local storage on your local machine or on your server.",
   "main": "dist/index/AdapterLocal.js",
   "types": "dist/index/AdapterLocal.d.ts",
   "homepage": "https://github.com/sab-js/storage-abstraction/",
   "repository": "https://github.com/sab-js/storage-abstraction/",
   "dependencies": {
-    "glob": "^13.0.6",
-    "rimraf": "^6.1.3"
+    "glob": "^14.0.6",
+    "rimraf": "^6.1.4"
   },
   "scripts": {},
   "keywords": [
